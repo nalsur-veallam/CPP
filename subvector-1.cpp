@@ -32,7 +32,6 @@ public:
         top = 0;
         capacity = 0;
         mas = NULL;
-        return true;
     }
     
     bool push_back(int d){
