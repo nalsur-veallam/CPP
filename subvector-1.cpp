@@ -3,7 +3,6 @@ private:
     int *mas;
     unsigned int top;
     unsigned int capacity;
-};
 /*bool init(subvector *qv); //инициализация пустого недовектора
 
 
