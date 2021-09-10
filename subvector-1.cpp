@@ -28,7 +28,7 @@ void destructor(subvector *qv); //очистить всю используему
 bool init_from_file(subvector *qv, char *filename); //инициализировать недовектор из файла
 */
 public:
-    bool init(){
+    subvector(){
         top = 0;
         capacity = 0;
         mas = NULL;
