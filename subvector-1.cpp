@@ -85,6 +85,8 @@ public:
 
     void destructor(){
         delete[] mas;
-        init();
+        top = 0;
+        capacity = 0;
+        mas = NULL;
     }
 };
