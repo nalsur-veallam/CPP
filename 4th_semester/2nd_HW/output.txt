@@ -1,0 +1,5 @@
+0.129586sec for array
+0.261552sec for vector
+0.37902sec for deque
+0.823327sec for list
+1.25061sec for forward_list
