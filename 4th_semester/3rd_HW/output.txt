@@ -1,0 +1,11 @@
+Please enter sequence of an integers (to quit press q + Enter):
+There is 16 odd numbers in the array.
+Max element is 6564; Min element is 1
+Prime number 5 is found.
+The sum of the elements of the second array is 1612
+43086024 412135 8777  - The three largest elements.
+Equal range for 1 is 1 1 1 1 1 1 1 
+First array: 1 1 1 4 4 4 4 9 9 16 16 25 25 25 25 25 25 36 49 64 81 100 1024 1089 1089 3025 4356 8836 412164 43086096 
+Second array: 1 1 1 1 11 21 23 26 26 27 29 30 35 35 36 40 49 59 62 62 63 67 67 68 72 82 86 90 92 93 
+Third array: 1026 15 24 25 99 3 23 14 997 1063 2963 4321 43086024 412135 8777 
+Fourth array: 1 1 1 1 1 1 1 4 4 4 4 9 9 11 16 16 21 23 25 25 25 25 25 25 26 26 27 29 30 35 35 36 36 40 49 49 59 62 62 63 64 67 67 68 72 81 82 86 90 92 93 100 1024 1089 1089 3025 4356 8836 412164 43086096 
