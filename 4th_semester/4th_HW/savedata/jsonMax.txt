@@ -1,0 +1,9 @@
+{
+      "age": 12,
+      "city": "Moscow",
+      "date_of_birth": "12:12:2002",
+      "email": "max@mail.ru",
+      "height": 134,
+      "name": "Max",
+      "sex": true
+}
