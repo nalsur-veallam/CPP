@@ -22,4 +22,4 @@ The Filesystem library provides facilities for performing operations on file sys
 * The date_browser.cpp file contains code that reads the date.txt file and using regular functions checks the data written there against the date pattern DD.MM.YYYY
 
 * The class.cpp file contains code with a structure that stores the name, age, sex, email, city, height, and date of birth of a person (it has its own overloaded operator). Also in the savedata/ directory are stored two json's files with the data of two people recorded there. To run use 
-< g++ class.cpp -std=c++17; ./a.out >
+> g++ class.cpp -std=c++17; ./a.out 
