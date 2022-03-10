@@ -1,9 +1,0 @@
-{
-      "age": 54,
-      "city": "Ryazan",
-      "date_of_birth": "03:06:1965",
-      "email": "yan@gmail.com",
-      "height": 182,
-      "name": "Yan",
-      "sex": false
-}

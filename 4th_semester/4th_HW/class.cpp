@@ -32,7 +32,7 @@ public:
      
         
         std::fstream file;
-        file.open("savedata/json" + name + ".txt", std::ios::trunc | std::ios::out);
+        file.open("savedata/json" + name + ".json", std::ios::trunc | std::ios::out);
         file << std::setw(6) << save;
     }
 };
