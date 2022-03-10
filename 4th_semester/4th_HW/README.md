@@ -1,4 +1,5 @@
 #Answers on questions:
+
 ##What are data exchange formats like XML and JSON good for?
 
 JSON and XML serve two different purposes.
@@ -11,10 +12,10 @@ XML, on the other hand, is a markup language, its purpose is document markup. Wh
 
 The Filesystem library provides facilities for performing operations on file systems and their components, such as paths, regular files, and directories and etc.
 
-     *file: a file system object that holds data, can be written to, read from, or both. Files have names, attributes, one of which is file type: 
-        *directory: a file that acts as a container of directory entries, which identify other files (some of which may be other, nested directories). When discussing a particular file, the directory in which it appears as an entry is its parent directory. The parent directory can be represented by the relative pathname "..".
-        *regular file: a directory entry that associates a name with an existing file (i.e. a hard link). If multiple hard links are supported, the file is removed after the last hard link to it is removed.
-       *path: sequence of elements that identifies a file. It begins with an optional root-name (e.g. "C:" or "//server" on Windows), followed by an optional root-directory (e.g. "/" on Unix), followed by a sequence of zero or more file names (all but last of which have to be directories or links to directories). The native format (e.g. which characters are used as separators) and character encoding of the string representation of a path (the pathname) is implementation-defined, this library provides portable representation of paths. 
+*file: a file system object that holds data, can be written to, read from, or both. Files have names, attributes, one of which is file type: 
+*directory: a file that acts as a container of directory entries, which identify other files (some of which may be other, nested directories). When discussing a particular file, the directory in which it appears as an entry is its parent directory. The parent directory can be represented by the relative pathname "..".
+*regular file: a directory entry that associates a name with an existing file (i.e. a hard link). If multiple hard links are supported, the file is removed after the last hard link to it is removed.
+*path: sequence of elements that identifies a file. It begins with an optional root-name (e.g. "C:" or "//server" on Windows), followed by an optional root-directory (e.g. "/" on Unix), followed by a sequence of zero or more file names (all but last of which have to be directories or links to directories). The native format (e.g. which characters are used as separators) and character encoding of the string representation of a path (the pathname) is implementation-defined, this library provides portable representation of paths. 
        
 #Description of the written code
 
