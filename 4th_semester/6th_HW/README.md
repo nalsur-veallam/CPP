@@ -31,3 +31,6 @@ Using a mutex is often much easier than using atomic operations. It allows you t
 
 * The file ts_queue.hpp contains a thread-safe queue class in C++, which is tested by the code in main.cpp. This code calculates the program's running time depending on the number of tasks (just for the sake of interest, I did it). The result of the program is in the file out.txt. A graph was also built by the script graph.py based on the received data. The graph is in the file graph.pdf. To run use:
 > g++ main.cpp -lpthread -std=c++17; ./a.out
+
+* Also in the accumulate.cpp file, the parallel_accumulate algorithm from the previous job is modified so that the results are written to a shared variable passed by reference. For more details about the algorithm, see the previous task. To run use:
+> g++ accumulate.cpp -lpthread -std=c++17; ./a.out
