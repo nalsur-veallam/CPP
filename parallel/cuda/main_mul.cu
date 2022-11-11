@@ -4,7 +4,7 @@
 #define SIZE (4096*4096)
 #define THREADS_PER_BLOCK 32
 #define NSTREAMS 2
-#define TILE_WIDTH 16
+#define TILE_WIDTH 64
 
 __global__ void mat_mul(float* dA, float* dB, float* dC, int N){
     int idx = blockIdx.y*blockDim.y+threadIdx.y;
@@ -15,19 +15,6 @@ __global__ void mat_mul(float* dA, float* dB, float* dC, int N){
     if (idx < N && idy < N){
         for (int i = 0; i < N; i++)
             blockSum += dA[idx*N + i] * dB[i*N + idy];
-    }
-    dC[idx*N + idy] = blockSum;
-}
-
-__global__ void mat_mul_async(float* dA, float* dB, float* dC, int N){
-    int idx = blockIdx.y*blockDim.y+threadIdx.y;
-    int idy = blockIdx.x*blockDim.x+threadIdx.x;
-
-    float blockSum = 0;
-
-    if (idx < N && idy < N){
-        for (int i = 0; i < N; i++)
-            blockSum += dA[idx*N + i] * dB[idy*N + i]; // Matrix B transposed
     }
     dC[idx*N + idy] = blockSum;
 }
@@ -168,12 +155,7 @@ int main (int argc, char *argv[])
     
     cudaDeviceSynchronize();
     
-    for (int i = 0; i < NSTREAMS; i++){    
-        int offset = i*STREAM_SIZE;
-        mat_mul_async<<< blocksPerGrid, threadsPerBlock, 0, stream[i]>>>(dA + (int)offset, dB + (int)offset, dC + (int)offset, N);
-    }
-    
-    cudaDeviceSynchronize();
+    mat_mul<<< blocksPerGrid, threadsPerBlock >>>(dA, dB, dC, N);
     
     for (int i = 0; i < NSTREAMS; i++){
         int offset = i*STREAM_SIZE;
